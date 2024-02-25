@@ -29,11 +29,13 @@ function Header({ windowWidth }) {
         ) : (
           <>
             {windowWidth <= 1199 ? (
-              <div className={HeaderCSS.temp}></div>
+              <>
+                <div className={HeaderCSS.temp}></div>
+                <Navigation mode="tablet" />
+              </>
             ) : (
-              <></>
+              <Navigation mode="laptop" />
             )}
-            <Navigation mode="other" />
           </>
         )}
         <img

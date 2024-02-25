@@ -61,6 +61,30 @@
 }
 
 @media (min-width: 1200px) {
+  .displayListItems > .sublink {
+    height: auto;
+    display: block;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 42px;
+    position: relative;
+  }
+
+  .displayListItems {
+    position: absolute;
+    width: 172px;
+    top: 38px;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+
+  .sublink:hover {
+    background: #d9232e;
+    color: #fff;
+  }
+
   .navMenu {
     display: flex;
     position: relative;
@@ -75,13 +99,20 @@
     padding-bottom: 20px;
   }
 
+  .hover {
+    color: #d9232e;
+  }
+
   .link:hover {
     color: #d9232e;
   }
 
   .line {
     height: 3px;
+    z-index: 0;
     background: #d10709;
     position: absolute;
+    top: 2.2rem;
+    transition: all 0.5s ease 0s;
   }
 }

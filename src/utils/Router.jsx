@@ -4,6 +4,7 @@ import BrandPage from "../components/brand/BrandPage";
 import HomePage from "../components/homePage/HomePage";
 import Header from "../components/header/Header";
 import { useEffect, useState } from "react";
+import Footer from "../components/footer/Footer";
 
 const Router = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -25,7 +26,7 @@ const Router = () => {
       <>
         <Header windowWidth={windowWidth} />
         <Outlet />
-        {/* <Footer /> */}
+        <Footer />
       </>
     );
   }

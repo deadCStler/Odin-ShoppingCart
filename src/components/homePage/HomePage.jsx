@@ -1,5 +1,13 @@
+import Banner from "./Banner";
+import Content from "./Content";
+
 function HomePage() {
-  return <h1>Home Page</h1>;
+  return (
+    <>
+      <Banner />
+      <Content />
+    </>
+  );
 }
 
 export default HomePage;

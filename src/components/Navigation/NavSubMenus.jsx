@@ -16,7 +16,7 @@ function ProductLinks({ display }) {
   return (
     <ul className={display ? NavigationCSS.displayListItems : ""}>
       <Link className={NavigationCSS.sublink}>Household</Link>
-      <Link className={NavigationCSS.sublink}>Daily Linkfe</Link>
+      <Link className={NavigationCSS.sublink}>Daily Life</Link>
       <Link className={NavigationCSS.sublink}>Health & Beauty</Link>
       <Link className={NavigationCSS.sublink}>Fashion</Link>
       <Link className={NavigationCSS.sublink}>Digital Products</Link>
