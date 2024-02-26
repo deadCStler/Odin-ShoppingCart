@@ -23,6 +23,7 @@ function Navigation({ mode }) {
           handleBrandClick={handleBrandClick}
           handleProductClick={handleProductClick}
           handleContactClick={handleContactClick}
+          mode={mode}
         />
       ) : (
         <NavigationOther

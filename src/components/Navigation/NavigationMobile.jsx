@@ -10,6 +10,7 @@ function NavigationMobile({
   handleBrandClick,
   handleProductClick,
   handleContactClick,
+  mode,
 }) {
   return (
     <>
@@ -26,7 +27,7 @@ function NavigationMobile({
           className={brandLI ? NavigationCSS.open : NavigationCSS.arrow}
         />
       </li>
-      <BrandLinks display={brandLI} />
+      <BrandLinks display={brandLI} mode={mode} />
       <li onClick={handleProductClick}>
         <span>Product</span>
         <img
@@ -35,7 +36,7 @@ function NavigationMobile({
           className={productLI ? NavigationCSS.open : NavigationCSS.arrow}
         />
       </li>
-      <ProductLinks display={productLI} />
+      <ProductLinks display={productLI} mode={mode} />
       <li>
         <Link className={NavigationCSS.link} to="/news">
           News
@@ -54,7 +55,7 @@ function NavigationMobile({
           className={contactLI ? NavigationCSS.open : NavigationCSS.arrow}
         />
       </li>
-      <ContactLinks display={contactLI} />
+      <ContactLinks display={contactLI} mode={mode} />
     </>
   );
 }

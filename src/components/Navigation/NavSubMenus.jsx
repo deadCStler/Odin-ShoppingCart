@@ -1,9 +1,15 @@
 import NavigationCSS from "./Navigation.module.css";
 import { Link } from "react-router-dom";
 
-function BrandLinks({ display }) {
+function BrandLinks({ display, mode }) {
   return (
     <div className={display ? NavigationCSS.displayListItems : ""}>
+      {mode === "mobile" ? (
+        <Link className={NavigationCSS.sublink}>Brand</Link>
+      ) : (
+        ""
+      )}
+      {mode === "laptop" ? <div className={NavigationCSS.filler}></div> : ""}
       <Link className={NavigationCSS.sublink}>Brand Profile</Link>
       <Link className={NavigationCSS.sublink}>Founder</Link>
       <Link className={NavigationCSS.sublink}>Development</Link>
@@ -12,9 +18,15 @@ function BrandLinks({ display }) {
   );
 }
 
-function ProductLinks({ display }) {
+function ProductLinks({ display, mode }) {
   return (
     <ul className={display ? NavigationCSS.displayListItems : ""}>
+      {mode === "mobile" ? (
+        <Link className={NavigationCSS.sublink}>Product</Link>
+      ) : (
+        ""
+      )}
+      {mode === "laptop" ? <div className={NavigationCSS.filler}></div> : ""}
       <Link className={NavigationCSS.sublink}>Household</Link>
       <Link className={NavigationCSS.sublink}>Daily Life</Link>
       <Link className={NavigationCSS.sublink}>Health & Beauty</Link>
@@ -25,11 +37,17 @@ function ProductLinks({ display }) {
   );
 }
 
-function ContactLinks({ display }) {
+function ContactLinks({ display, mode }) {
   return (
     <ul className={display ? NavigationCSS.displayListItems : ""}>
+      {mode === "mobile" ? (
+        <Link className={NavigationCSS.sublink}>Contact</Link>
+      ) : (
+        ""
+      )}
+      {mode === "laptop" ? <div className={NavigationCSS.filler}></div> : ""}
       <Link className={NavigationCSS.sublink}>Opportunities</Link>
-      <Link className={NavigationCSS.sublink}>SuppLinker Channels</Link>
+      <Link className={NavigationCSS.sublink}>Supplier Channels</Link>
     </ul>
   );
 }
