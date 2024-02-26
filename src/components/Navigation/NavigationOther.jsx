@@ -3,6 +3,15 @@ import NavigationCSS from "./Navigation.module.css";
 import { BrandLinks, ProductLinks, ContactLinks } from "./NavSubMenus";
 import { useEffect, useState } from "react";
 
+const CalculateLeft = (key) => {
+  let left = 53;
+  for (let i = 1; i < key; i++) {
+    const eleWidth = document.getElementById(i).offsetWidth;
+    left = left + eleWidth + 53;
+  }
+  return left;
+};
+
 function NaivgationOther({
   brandLI,
   productLI,
@@ -17,7 +26,8 @@ function NaivgationOther({
   const initialValue = () => {
     const activeElement = document.querySelector(".active");
     if (activeElement) {
-      const { width, left } = activeElement.getBoundingClientRect();
+      const width = activeElement.querySelector("span").offsetWidth;
+      const left = CalculateLeft(activeElement.querySelector("span").id);
       return { width, left };
     }
   };
@@ -27,7 +37,8 @@ function NaivgationOther({
   }, []);
 
   const handleMouseEnter = (event) => {
-    const { width, left } = event.target.getBoundingClientRect();
+    const width = event.target.offsetWidth;
+    const left = CalculateLeft(event.target.id);
     setDimensions({ width, left });
   };
 
@@ -40,7 +51,9 @@ function NaivgationOther({
     <>
       <li onMouseLeave={handleMouseLeave}>
         <NavLink className={NavigationCSS.link} to="/">
-          <span onMouseEnter={handleMouseEnter}>Home</span>
+          <span onMouseEnter={handleMouseEnter} id="1">
+            Home
+          </span>
         </NavLink>
       </li>
       <li onMouseEnter={handleBrandClick} onMouseLeave={handleBrandClick}>
@@ -50,7 +63,9 @@ function NaivgationOther({
           }`}
           to="/brand"
         >
-          <span onMouseEnter={handleMouseEnter}>Brand</span>
+          <span onMouseEnter={handleMouseEnter} id="2">
+            Brand
+          </span>
         </NavLink>
         <div onMouseLeave={handleMouseLeave}>
           <BrandLinks display={brandLI} mode={mode} />
@@ -63,7 +78,9 @@ function NaivgationOther({
           }`}
           to="/product"
         >
-          <span onMouseEnter={handleMouseEnter}>Product</span>
+          <span onMouseEnter={handleMouseEnter} id="3">
+            Product
+          </span>
         </NavLink>
         <div onMouseLeave={handleMouseLeave}>
           <ProductLinks display={productLI} mode={mode} />
@@ -76,6 +93,7 @@ function NaivgationOther({
             <span
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              id="4"
             >
               Special Campaign
             </span>
@@ -85,7 +103,11 @@ function NaivgationOther({
 
       <li>
         <NavLink className={NavigationCSS.link} to="/news">
-          <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <span
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            id="5"
+          >
             News
           </span>
         </NavLink>
@@ -97,6 +119,7 @@ function NaivgationOther({
             <span
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              id="6"
             >
               Franchise
             </span>
@@ -106,7 +129,11 @@ function NaivgationOther({
 
       <li>
         <NavLink className={NavigationCSS.link} to="/store">
-          <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <span
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            id="7"
+          >
             Store
           </span>
         </NavLink>
@@ -118,19 +145,20 @@ function NaivgationOther({
           }`}
           to="/contact"
         >
-          <span onMouseEnter={handleMouseEnter}>Contact</span>
+          <span onMouseEnter={handleMouseEnter} id="8">
+            Contact
+          </span>
         </NavLink>
         <div onMouseLeave={handleMouseLeave}>
           <ContactLinks display={contactLI} mode={mode} />
         </div>
       </li>
-      {/* {setDimensions(initialValue())} */}
       {mode === "laptop" && (
         <div
           className={NavigationCSS.line}
           style={{
             width: dimensions.width,
-            left: dimensions.left - 595,
+            left: dimensions.left,
           }}
         ></div>
       )}

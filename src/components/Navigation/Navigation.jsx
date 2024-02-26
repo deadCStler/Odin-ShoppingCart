@@ -14,7 +14,7 @@ function Navigation({ mode }) {
   const handleContactClick = () => setContactLI(!contactLI);
 
   return (
-    <ul className={NavigationCSS.navMenu}>
+    <ul className={NavigationCSS.navMenu} id="navmenu">
       {mode === "mobile" ? (
         <NavigationMobile
           brandLI={brandLI}
