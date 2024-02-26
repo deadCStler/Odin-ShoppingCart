@@ -15,25 +15,49 @@ function Banner() {
   ];
 
   const [currBanner, setCurrBanner] = useState(0);
-  const [prevBanner, setPrevBanner] = useState(imgArr.length - 1);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPrevBanner(currBanner);
       setCurrBanner((prevIndex) =>
         prevIndex < imgArr.length - 1 ? prevIndex + 1 : 0
       );
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [imgArr.length]);
 
-  //will use the prev banner to show animation
   return (
     <div className={HomePageCSS.banner}>
-      <Link to={imgArr[currBanner].to} className={HomePageCSS.display}>
-        <img src={imgArr[currBanner].src} alt={imgArr[currBanner].alt} />
-      </Link>
+      {imgArr.map((item, index) => (
+        <Link key={index} to={item.to} className={HomePageCSS.display}>
+          <img
+            src={item.src}
+            alt={item.alt}
+            hidden={index === currBanner ? "" : "hidden"}
+          />
+        </Link>
+      ))}
+      <div className={HomePageCSS.slider}>
+        <div
+          className={currBanner === 0 ? HomePageCSS.active : HomePageCSS.circle}
+          onClick={() => setCurrBanner(0)}
+        ></div>
+        <div className={HomePageCSS.dashed}>-----</div>
+        <div
+          className={currBanner === 1 ? HomePageCSS.active : HomePageCSS.circle}
+          onClick={() => setCurrBanner(1)}
+        ></div>
+        <div className={HomePageCSS.dashed}>-----</div>
+        <div
+          className={currBanner === 2 ? HomePageCSS.active : HomePageCSS.circle}
+          onClick={() => setCurrBanner(2)}
+        ></div>
+        <div className={HomePageCSS.dashed}>-----</div>
+        <div
+          className={currBanner === 3 ? HomePageCSS.active : HomePageCSS.circle}
+          onClick={() => setCurrBanner(3)}
+        ></div>
+      </div>
     </div>
   );
 }
