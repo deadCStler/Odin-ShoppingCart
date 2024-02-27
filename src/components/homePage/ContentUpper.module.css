@@ -1,14 +1,9 @@
-.upper {
-  padding: 0 0.5rem;
-}
-
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
-
 .brand {
   position: relative;
+}
+
+.brand:hover > .profileText {
+  color: #d10709;
 }
 
 .profileText {
@@ -16,14 +11,18 @@
   color: #fff;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 5vw;
+  top: 2%;
+  right: 5%;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 47.5%;
-  height: 55%;
+  height: 40%;
   border: solid 0.01rem #d4d4d4;
   padding: 3.5% 0;
 }
@@ -37,6 +36,7 @@
 .info > p {
   color: #222222;
   text-align: center;
+  font-size: 3.95vw;
 }
 
 .info > div {
@@ -55,6 +55,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .FranchiseIMG > div {
@@ -65,11 +66,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  border-top: 0.03rem solid #fff;
-  border-bottom: 0.03rem solid #fff;
+  width: 70%;
 }
 
 @media (max-width: 760px) {
+  .upper {
+    padding: 0 0.5rem;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .brand {
     width: 47.5%;
     height: 55%;
@@ -80,14 +89,7 @@
     height: auto;
   }
 
-  .profileText {
-    font-size: 5vw;
-    top: 2%;
-    right: 5%;
-  }
-
   .info > p {
-    font-size: 3.95vw;
     margin-top: 27%;
   }
 
@@ -101,18 +103,97 @@
     object-fit: fill;
   }
 
-  .FranchiseIMG {
-    width: 100%;
-  }
-
   .FranchiseIMG > div {
     width: 60%;
     font-size: 5vw;
+    border-top: 0.03rem solid #fff;
+    border-bottom: 0.03rem solid #fff;
   }
 }
 
 @media (min-width: 761px) and (max-width: 1199px) {
+  .upper {
+    display: flex;
+    gap: 2%;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5%;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .info > div {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 2.7% 0 7.2%;
+  }
+
+  .learnMore > img {
+    width: 20vw;
+    height: auto;
+  }
+
+  .FranchiseIMG > div {
+    font-size: 3vw;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    line-height: 60px;
+  }
+
+  .FranchiseIMG:hover > div {
+    color: #d10709;
+    border-top: 3px solid #d10709;
+    border-bottom: 3px solid #d10709;
+  }
 }
 
 @media (min-width: 1200px) {
+  .upper {
+    display: flex;
+    gap: 2%;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5%;
+  }
+
+  .profileText {
+    font-size: 48px;
+  }
+
+  .info {
+    width: 100%;
+    padding: 0 0 7.5%;
+  }
+
+  .info > p {
+    font-size: 48px;
+    margin-top: 76px;
+  }
+
+  .info > div {
+    margin: 19px auto 38px;
+  }
+
+  .FranchiseIMG > div {
+    font-size: 36px;
+    color: #fff;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    line-height: 80px;
+  }
+
+  .FranchiseIMG:hover > div {
+    color: #d10709;
+    border-top: 3px solid #d10709;
+    border-bottom: 3px solid #d10709;
+  }
 }

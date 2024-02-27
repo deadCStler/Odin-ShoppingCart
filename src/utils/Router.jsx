@@ -5,6 +5,7 @@ import HomePage from "../components/homePage/HomePage";
 import Header from "../components/header/Header";
 import { useEffect, useState } from "react";
 import Footer from "../components/footer/Footer";
+import Franchise from "../components/Others/Franchise";
 
 const Router = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -43,6 +44,10 @@ const Router = () => {
         {
           path: "/brand",
           element: <BrandPage />,
+        },
+        {
+          path: "/franchise",
+          element: <Franchise />,
         },
       ],
     },

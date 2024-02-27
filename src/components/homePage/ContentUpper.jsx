@@ -20,7 +20,7 @@ function HomePageBrand() {
   );
 }
 
-function FranchiseUpper() {
+export function FranchiseUpper() {
   const [learnMore, setLearnMore] = useState(false);
 
   return (

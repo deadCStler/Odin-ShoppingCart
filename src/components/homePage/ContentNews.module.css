@@ -1,0 +1,161 @@
+.grid {
+  width: 100%;
+  display: grid;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  font-size: 4.5vw;
+}
+
+.newsEle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsEle:hover > .newsTitle {
+  color: #d10709;
+  cursor: pointer;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  background: #ccc;
+  vertical-align: middle;
+  width: 6vw;
+  margin: 2%;
+}
+
+.newsTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+}
+
+.newsBody {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #666;
+}
+
+.learnMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .news {
+    margin-top: 0.92rem;
+    padding: 0 0.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3%;
+  }
+
+  .title {
+    font-size: 5vw;
+  }
+
+  .img {
+    width: 70%;
+  }
+
+  .newsTitle {
+    max-height: 1.5rem;
+    width: 70%;
+    font-size: 2vw;
+    line-height: 0.5rem;
+  }
+
+  .newsBody {
+    margin-top: 2%;
+    max-height: 1.5rem;
+    width: 70%;
+    font-size: 1.5vw;
+    line-height: 0.5rem;
+  }
+
+  .learnMore > img {
+    width: 25%;
+    object-fit: fill;
+    margin-top: 8%;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5%;
+    gap: 2%;
+  }
+
+  .newsTitle {
+    height: 1.5rem;
+    font-size: 2vw;
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+  .newsBody {
+    margin-top: 2%;
+    height: 4rem;
+    font-size: 12px;
+    line-height: 1rem;
+  }
+
+  .learnMore > img {
+    width: 18vw;
+    height: auto;
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5%;
+    gap: 2%;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .title::before,
+  .title::after {
+    width: 43px;
+  }
+
+  .img {
+    width: 380px;
+    height: 214px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  .newsTitle {
+    font-size: 18px;
+    line-height: 36px;
+    height: 31px;
+  }
+
+  .newsBody {
+    height: 76px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 18px;
+  }
+
+  .learnMore {
+    margin-top: 100px;
+  }
+}
