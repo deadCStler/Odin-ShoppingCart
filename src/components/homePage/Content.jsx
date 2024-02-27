@@ -1,7 +1,10 @@
+import ContentUpper from "./ContentUpper";
+import HomePageCSS from "./HomePage.module.css";
+
 function Content() {
   return (
-    <div>
-      <h1>Upper</h1>
+    <div className={HomePageCSS.content}>
+      <ContentUpper />
       <h1>Best Choice</h1>
       <h1>News</h1>
     </div>

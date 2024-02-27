@@ -1,0 +1,118 @@
+.upper {
+  padding: 0 0.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand {
+  position: relative;
+}
+
+.profileText {
+  position: absolute;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 47.5%;
+  height: 55%;
+  border: solid 0.01rem #d4d4d4;
+  padding: 3.5% 0;
+}
+
+.info > p,
+.info > div,
+.learnMore {
+  width: 100%;
+}
+
+.info > p {
+  color: #222222;
+  text-align: center;
+}
+
+.info > div {
+  color: #666;
+  text-align: center;
+}
+
+.learnMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FranchiseIMG {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FranchiseIMG > div {
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  border-top: 0.03rem solid #fff;
+  border-bottom: 0.03rem solid #fff;
+}
+
+@media (max-width: 760px) {
+  .brand {
+    width: 47.5%;
+    height: 55%;
+  }
+
+  .BrandHomeIMG {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .profileText {
+    font-size: 5vw;
+    top: 2%;
+    right: 5%;
+  }
+
+  .info > p {
+    font-size: 3.95vw;
+    margin-top: 27%;
+  }
+
+  .info > div {
+    margin: 5% 0 15%;
+    font-size: 2.97vw;
+  }
+
+  .learnMore > img {
+    width: 80%;
+    object-fit: fill;
+  }
+
+  .FranchiseIMG {
+    width: 100%;
+  }
+
+  .FranchiseIMG > div {
+    width: 60%;
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) {
+}

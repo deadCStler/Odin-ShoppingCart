@@ -33,6 +33,7 @@ function Banner() {
           <img
             src={item.src}
             alt={item.alt}
+            className={HomePageCSS.img}
             hidden={index === currBanner ? "" : "hidden"}
           />
         </Link>
