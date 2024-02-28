@@ -54,6 +54,21 @@ function NaivgationOther({
     }
   };
 
+  const handleLeaveB = () => {
+    handleBrandClick();
+    handleMouseLeave();
+  };
+
+  const handleLeaveP = () => {
+    handleProductClick();
+    handleMouseLeave();
+  };
+
+  const handleLeaveC = () => {
+    handleContactClick();
+    handleMouseLeave();
+  };
+
   return (
     <>
       <li onMouseLeave={handleMouseLeave}>
@@ -63,7 +78,7 @@ function NaivgationOther({
           </span>
         </NavLink>
       </li>
-      <li onMouseEnter={handleBrandClick} onMouseLeave={handleBrandClick}>
+      <li onMouseEnter={handleBrandClick} onMouseLeave={handleLeaveB}>
         <NavLink
           className={`${NavigationCSS.link} ${
             brandLI ? NavigationCSS.hover : ""
@@ -74,11 +89,9 @@ function NaivgationOther({
             Brand
           </span>
         </NavLink>
-        <div onMouseLeave={handleMouseLeave}>
-          <BrandLinks display={brandLI} mode={mode} />
-        </div>
+        <BrandLinks display={brandLI} mode={mode} />
       </li>
-      <li onMouseEnter={handleProductClick} onMouseLeave={handleProductClick}>
+      <li onMouseEnter={handleProductClick} onMouseLeave={handleLeaveP}>
         <NavLink
           className={`${NavigationCSS.link} ${
             productLI ? NavigationCSS.hover : ""
@@ -89,9 +102,8 @@ function NaivgationOther({
             Product
           </span>
         </NavLink>
-        <div onMouseLeave={handleMouseLeave}>
-          <ProductLinks display={productLI} mode={mode} />
-        </div>
+
+        <ProductLinks display={productLI} mode={mode} />
       </li>
 
       {mode === "laptop" && (
@@ -145,7 +157,7 @@ function NaivgationOther({
           </span>
         </NavLink>
       </li>
-      <li onMouseEnter={handleContactClick} onMouseLeave={handleContactClick}>
+      <li onMouseEnter={handleContactClick} onMouseLeave={handleLeaveC}>
         <NavLink
           className={`${NavigationCSS.link} ${
             contactLI ? NavigationCSS.hover : ""
@@ -156,9 +168,7 @@ function NaivgationOther({
             Contact
           </span>
         </NavLink>
-        <div onMouseLeave={handleMouseLeave}>
-          <ContactLinks display={contactLI} mode={mode} />
-        </div>
+        <ContactLinks display={contactLI} mode={mode} />
       </li>
       {mode === "laptop" && (
         <div

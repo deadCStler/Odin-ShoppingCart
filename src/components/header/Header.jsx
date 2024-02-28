@@ -3,10 +3,23 @@ import HeaderCSS from "./Header.module.css";
 import searchIcon from "../../assets/blacksearch.png";
 import logo from "../../assets/miniso-seeklogo.webp";
 import MenuIcon from "./MenuBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function Header({ windowWidth }) {
+function Header() {
   const [display, setDisplay] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   const toggleDialog = () => {
     setDisplay(!display);

@@ -1,0 +1,30 @@
+.heading {
+  text-align: center;
+  font-size: 4.5vw;
+}
+
+.grid {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+}
+
+.gridEle {
+  background-color: #f3f3f3;
+}
+
+.gridHeading {
+  color: #d10709;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .heading {
+    /* font-size: 5vw; */
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) {
+}

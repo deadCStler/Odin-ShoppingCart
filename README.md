@@ -1,5 +1,6 @@
 Things pending to do:
 
+- Fix routing
 - Style Contact Page and its sub pages
   - Optional: integrate google maps
 - Implement Store:
