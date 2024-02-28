@@ -24,12 +24,15 @@ function NaivgationOther({
   const [dimensions, setDimensions] = useState({ width: 0, left: 0 });
 
   const initialValue = () => {
-    const activeElement = document.querySelector(".active");
-    if (activeElement) {
-      const width = activeElement.querySelector("span").offsetWidth;
-      const left = CalculateLeft(activeElement.querySelector("span").id);
-      return { width, left };
+    if (mode === "laptop") {
+      const activeElement = document.querySelector(".active");
+      if (activeElement) {
+        const width = activeElement.querySelector("span").offsetWidth;
+        const left = CalculateLeft(activeElement.querySelector("span").id);
+        return { width, left };
+      }
     }
+    return { width: 0, left: 0 };
   };
 
   useEffect(() => {
@@ -37,14 +40,18 @@ function NaivgationOther({
   }, []);
 
   const handleMouseEnter = (event) => {
-    const width = event.target.offsetWidth;
-    const left = CalculateLeft(event.target.id);
-    setDimensions({ width, left });
+    if (mode === "laptop") {
+      const width = event.target.offsetWidth;
+      const left = CalculateLeft(event.target.id);
+      setDimensions({ width, left });
+    }
   };
 
   const handleMouseLeave = () => {
-    const { width, left } = initialValue();
-    setDimensions({ width, left });
+    if (mode === "laptop") {
+      const { width, left } = initialValue();
+      setDimensions({ width, left });
+    }
   };
 
   return (

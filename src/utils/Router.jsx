@@ -6,6 +6,9 @@ import Header from "../components/header/Header";
 import { useEffect, useState } from "react";
 import Footer from "../components/footer/Footer";
 import Franchise from "../components/Others/Franchise";
+import News from "../components/news/News";
+import Contact from "../components/contactUs/Contact";
+import ContactSub from "../components/contactUs/ContactSub";
 
 const Router = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -48,6 +51,18 @@ const Router = () => {
         {
           path: "/franchise",
           element: <Franchise />,
+        },
+        {
+          path: "/news",
+          element: <News />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "/contact/:name",
+          element: <ContactSub />,
         },
       ],
     },

@@ -5,7 +5,7 @@ import RedLearnMore from "../../assets/whitearrow.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function NewsArticle({ title, body }) {
+export function NewsArticle({ title, body }) {
   return (
     <div className={ContentNewsCSS.newsEle}>
       <div className={ContentNewsCSS.img}>

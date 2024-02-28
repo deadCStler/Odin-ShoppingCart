@@ -50,6 +50,10 @@
   justify-content: center;
 }
 
+.newsEle:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 760px) {
   .news {
     margin-top: 0.92rem;

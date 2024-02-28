@@ -46,8 +46,12 @@ function ContactLinks({ display, mode }) {
         ""
       )}
       {mode === "laptop" ? <div className={NavigationCSS.filler}></div> : ""}
-      <Link className={NavigationCSS.sublink}>Opportunities</Link>
-      <Link className={NavigationCSS.sublink}>Supplier Channels</Link>
+      <Link to="/contact/opportunities" className={NavigationCSS.sublink}>
+        Opportunities
+      </Link>
+      <Link to="/contact/supplierchannels" className={NavigationCSS.sublink}>
+        Supplier Channels
+      </Link>
     </ul>
   );
 }

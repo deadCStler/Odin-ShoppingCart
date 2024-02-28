@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  gap: 25px;
+}
+
+.load {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-rows: repeat(6, 1fr);
+    padding-top: 10px;
+  }
+
+  .load {
+    height: 20px;
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 53px;
+  }
+
+  .load {
+    height: 31px;
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 100px;
+  }
+
+  .load {
+    padding-top: 50px;
+  }
+}
