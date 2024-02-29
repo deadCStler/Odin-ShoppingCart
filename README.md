@@ -1,13 +1,22 @@
 Things pending to do:
 
-- Fix routing
-- Style Contact Page and its sub pages
-  - Optional: integrate google maps
+- ~~Style Contact Page and its sub pages~~
 - Implement Store:
   - Either make it store locator or show some images with maps
-- Brand and its sub pages
+- Brand
+  - Brand Profile
+  - Development
 - Product and its sub pages
-- Best Section at Home page
-- Cart and specific product page
+  - Page for each product where you can add to cart
+- Data Fetching
+  - Best Section at Home page
+- Cart
   - Local Storage
+  - ~~Adding Cart Icons~~
 - Sign in as User
+  - ~~Adding Icons~~
+- Updated the links of banner and home icon
+
+Bugs to address:
+
+- Closing of Nav menu when rendering another page.

@@ -1,30 +1,130 @@
 .heading {
   text-align: center;
-  font-size: 4.5vw;
+  font-size: 4vw;
 }
 
 .grid {
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
 }
 
 .gridEle {
   background-color: #f3f3f3;
+  margin-top: 20px;
+  padding: 12px;
 }
 
 .gridHeading {
   color: #d10709;
   cursor: pointer;
+  font-weight: 600;
+}
+
+.hr {
+  border-top: 3px solid #d9232e;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.rel {
+  position: relative;
+}
+
+.suppText {
+  position: absolute;
+  top: 13%;
+  left: 7%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
 }
 
 @media (max-width: 760px) {
+  .main {
+    padding-top: 10px;
+  }
+
+  .grid,
+  .rel {
+    padding: 0.5rem 0.5rem 1rem;
+  }
+
+  .rel {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
   .heading {
-    /* font-size: 5vw; */
+    font-size: 5vw;
+  }
+
+  .suppText {
+    width: 30vw;
+    overflow-wrap: break-word;
+  }
+
+  .suppText > h1 {
+    font-size: 5vw;
+  }
+
+  .suppDiv {
+    font-size: 2.97vw;
   }
 }
 
 @media (min-width: 761px) and (max-width: 1199px) {
+  .main {
+    padding-top: 53px;
+  }
+
+  .suppText > h1 {
+    font-size: 4vw;
+  }
+
+  .rel {
+    margin-top: 53px;
+  }
+
+  .suppDiv {
+    font-size: 2vw;
+  }
 }
 
 @media (min-width: 1200px) {
+  .main {
+    padding: 100px 20px 50px;
+    border: solid 1px #e1e1e1;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .gridHeading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .hr {
+    width: 200px;
+    margin-top: 10px;
+  }
+
+  .rel {
+    margin-top: 100px;
+  }
+
+  .suppText > h1 {
+    font-size: 36px;
+  }
+
+  .suppDiv {
+    font-size: 20px;
+  }
 }

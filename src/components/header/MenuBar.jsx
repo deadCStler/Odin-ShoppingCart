@@ -10,10 +10,7 @@ function MenuIcon({ onClick }) {
   };
 
   return (
-    <div
-      className={`${HeaderCSS.container} ${change ? HeaderCSS.change : ""}`}
-      onClick={handleClick}
-    >
+    <div className={change ? HeaderCSS.change : ""} onClick={handleClick}>
       <div className={HeaderCSS.bar1}></div>
       <div className={HeaderCSS.bar2}></div>
       <div className={HeaderCSS.bar3}></div>

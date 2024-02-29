@@ -3,31 +3,35 @@
   justify-content: space-between;
 }
 
-.right {
+.right,
+.left {
   display: flex;
   align-items: center;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
-.searchIcon {
-  width: 12px;
-  margin-left: 15px;
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
 @media (max-width: 760px) {
   .logo {
     width: 1.5rem;
   }
+
   .main {
     align-items: center;
     padding: 0.5rem 0.5rem 1rem;
   }
 
-  .searchIcon {
-    width: 16px;
+  .left {
+    gap: 1em;
   }
 
   .dialog {
@@ -46,6 +50,10 @@ ul {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .hideOpaque {
+    display: none;
   }
 
   .bar1,

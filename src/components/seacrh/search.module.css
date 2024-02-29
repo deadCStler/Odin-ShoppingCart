@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 20px;
+  margin-left: 15px;
+}
+
+@media (max-width: 760px) {
+  .logo {
+    width: 16px;
+  }
+}

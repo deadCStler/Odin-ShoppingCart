@@ -1,10 +1,16 @@
-import { useParams } from "react-router-dom";
 import ContactCSS from "./Contact.module.css";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import LearnMore from "../../assets/graylink.png";
+import RedLearnMore from "../../assets/whitearrow.png";
+import SupplierBig from "../../assets/supplierbg.jpg";
+import Supplier from "../../assets/suppliersmallbg.jpg";
 
 export function Opportunities() {
   return (
-    <>
+    <div className={ContactCSS.main}>
       <h1 className={ContactCSS.heading}>Opportunities for Cooperation</h1>
+      <hr className={ContactCSS.hr} />
       <div className={ContactCSS.grid}>
         <div className={ContactCSS.gridEle}>
           <div className={ContactCSS.gridHeading}>Contact for Legal Issue</div>
@@ -25,13 +31,37 @@ export function Opportunities() {
           <p>complaint@minibuy.com</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-function ContactSub() {
-  const { name } = useParams();
-  if (name === "opportunities") return <h1>From sub</h1>;
-}
+export function SupplierOpp() {
+  const [learnMore, setLearnMore] = useState(false);
 
-export default ContactSub;
+  return (
+    <div className={ContactCSS.rel}>
+      <div className={ContactCSS.suppIMG}>
+        {window.innerWidth < 761 ? (
+          <img src={Supplier} alt="supplier small" />
+        ) : (
+          <img src={SupplierBig} alt="supplier big" />
+        )}
+      </div>
+      <div className={ContactCSS.suppText}>
+        <h1>Suppliers Channel</h1>
+        <div className={ContactCSS.suppDiv}>
+          <p>Please Contact Us:</p>
+          <p>Email: globalsourcing@minibuy.com</p>
+        </div>
+        <Link
+          to="/franchise"
+          className={ContactCSS.learnMore}
+          onMouseEnter={() => setLearnMore(true)}
+          onMouseLeave={() => setLearnMore(false)}
+        >
+          <img src={learnMore ? RedLearnMore : LearnMore} alt="normal learn" />
+        </Link>
+      </div>
+    </div>
+  );
+}

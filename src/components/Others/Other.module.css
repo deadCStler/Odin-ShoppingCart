@@ -1,4 +1,12 @@
-.franchise {
+.franchise,
+.Campaign {
   display: flex;
   padding-top: 30px;
+}
+
+@media (max-width: 760px) {
+  .franchise,
+  .Campaign {
+    padding: 0.5rem 0.5rem 1rem;
+  }
 }
