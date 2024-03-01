@@ -10,10 +10,12 @@ function BrandLinks({ display, mode }) {
         ""
       )}
       {mode === "laptop" ? <div className={NavigationCSS.filler}></div> : ""}
-      <Link className={NavigationCSS.sublink}>Brand Profile</Link>
-      <Link className={NavigationCSS.sublink}>Founder</Link>
-      <Link className={NavigationCSS.sublink}>Development</Link>
-      <Link className={NavigationCSS.sublink}>Designer Team</Link>
+      <Link to="/brand/brandprofile" className={NavigationCSS.sublink}>
+        Brand Profile
+      </Link>
+      <Link to="/brand/development" className={NavigationCSS.sublink}>
+        Development
+      </Link>
     </div>
   );
 }

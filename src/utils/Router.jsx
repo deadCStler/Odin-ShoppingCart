@@ -49,6 +49,10 @@ const Router = () => {
           element: <BrandPage />,
         },
         {
+          path: "/brand/:name",
+          element: <BrandPage />,
+        },
+        {
           path: "/franchise",
           element: <Franchise />,
         },
