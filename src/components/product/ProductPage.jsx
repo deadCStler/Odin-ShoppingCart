@@ -20,13 +20,25 @@ function ProductPage() {
         <h1>Loading...</h1>
       ) : (
         <div className={ProductCSS.main}>
-          <div>
+          <div className={ProductCSS.img}>
             <img src={value.image} alt="product image" />
           </div>
-          <div>
-            <p>{value.title}</p>
-            <p> ₹{Math.round(value.price * 82.85)}</p>
-            <p>{value.description}</p>
+          <div className={ProductCSS.info}>
+            <h2>{value.title}</h2>
+            <p className={ProductCSS.price}>
+              {" "}
+              ₹{Math.round(value.price * 82.85)}
+            </p>
+            <div>
+              <button>Add to Cart</button>
+            </div>
+            <div>
+              <p>
+                <strong>About this item:</strong>
+              </p>
+              <br />
+              <p>{value.description}</p>
+            </div>
           </div>
         </div>
       )}
