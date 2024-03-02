@@ -6,8 +6,8 @@ Things pending to do:
 - Brand
   - Brand Profile
   - Development
-- Product and its sub pages
-  - Page for each product where you can add to cart
+- Page for each product where you can add to cart
+- ~~Product and its sub pages~~
 - Data Fetching
   - Best Section at Home page
 - Cart
@@ -15,7 +15,6 @@ Things pending to do:
   - ~~Adding Cart Icons~~
 - Sign in as User
   - ~~Adding Icons~~
-- Updated the links of banner and home icon
 
 Bugs to address:
 

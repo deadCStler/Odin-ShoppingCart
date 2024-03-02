@@ -9,6 +9,8 @@ import News from "../components/news/News";
 import Contact from "../components/contactUs/Contact";
 import { useState, useEffect } from "react";
 import Campaign from "../components/Others/Campaign";
+import Product from "../components/product/Product";
+import ProductPage from "../components/product/ProductPage";
 
 const Router = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -51,6 +53,18 @@ const Router = () => {
         {
           path: "/brand/:name",
           element: <BrandPage />,
+        },
+        {
+          path: "/product",
+          element: <Product />,
+        },
+        {
+          path: "/product/:name",
+          element: <Product />,
+        },
+        {
+          path: "/product/:category/:id",
+          element: <ProductPage />,
         },
         {
           path: "/franchise",

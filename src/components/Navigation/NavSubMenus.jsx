@@ -29,12 +29,18 @@ function ProductLinks({ display, mode }) {
         ""
       )}
       {mode === "laptop" ? <div className={NavigationCSS.filler}></div> : ""}
-      <Link className={NavigationCSS.sublink}>Household</Link>
-      <Link className={NavigationCSS.sublink}>Daily Life</Link>
-      <Link className={NavigationCSS.sublink}>Health & Beauty</Link>
-      <Link className={NavigationCSS.sublink}>Fashion</Link>
-      <Link className={NavigationCSS.sublink}>Digital Products</Link>
-      <Link className={NavigationCSS.sublink}>Food & Beverage</Link>
+      <Link to="/product/women-clothing" className={NavigationCSS.sublink}>
+        Women&apos;s Clothing
+      </Link>
+      <Link to="/product/men-clothing" className={NavigationCSS.sublink}>
+        Men&apos;s Clothing
+      </Link>
+      <Link to="/product/jewelery" className={NavigationCSS.sublink}>
+        Jewelery
+      </Link>
+      <Link to="/product/electronics" className={NavigationCSS.sublink}>
+        Electonics
+      </Link>
     </ul>
   );
 }

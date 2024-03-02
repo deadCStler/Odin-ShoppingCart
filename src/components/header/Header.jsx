@@ -5,7 +5,7 @@ import MenuIcon from "./MenuBar";
 import { useState } from "react";
 import SignIn from "../signIn/Signin";
 import Cart from "../cart/Cart";
-import Search from "../seacrh/Search";
+import Search from "../search/Search";
 
 function Header({ windowWidth }) {
   const [display, setDisplay] = useState(false);
