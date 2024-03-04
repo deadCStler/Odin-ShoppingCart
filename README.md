@@ -6,7 +6,7 @@ Things pending to do:
 - Brand
   - Brand Profile
   - Development
-- Page for each product where you can add to cart
+- ~~Page for each product where you can add to cart~~
 - ~~Product and its sub pages~~
 - Data Fetching
   - Best Section at Home page

@@ -57,6 +57,23 @@
   gap: 20px;
 }
 
+.button {
+  padding: 12px 24px;
+  background-color: #d9232e;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px; 
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-image: linear-gradient(rgb(0 0 0/30%) 0 0);
+}
+
+
 @media (max-width: 760px) {
   .menu {
     display: none;

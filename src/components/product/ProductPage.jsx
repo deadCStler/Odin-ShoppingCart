@@ -30,7 +30,7 @@ function ProductPage() {
               ₹{Math.round(value.price * 82.85)}
             </p>
             <div>
-              <button>Add to Cart</button>
+              <button className={ProductCSS.button}>Add to Cart</button>
             </div>
             <div>
               <p>
