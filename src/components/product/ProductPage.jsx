@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCSS from "./Product.module.css";
+import { addToCart, getSingIN } from "../../utils/LocalStorage";
 
 function ProductPage() {
   const { id = 0 } = useParams();
@@ -14,6 +15,15 @@ function ProductPage() {
       setValue(json);
     })();
   }, [id]);
+
+  const handleAddtoCart = () => {
+    if (getSingIN) {
+      alert("You need to sign in first");
+    } else {
+      addToCart(id);
+    }
+  };
+
   return (
     <>
       {Object.keys(value).length === 0 ? (
@@ -30,7 +40,9 @@ function ProductPage() {
               ₹{Math.round(value.price * 82.85)}
             </p>
             <div>
-              <button className={ProductCSS.button}>Add to Cart</button>
+              <button className={ProductCSS.button} onClick={handleAddtoCart}>
+                Add to Cart
+              </button>
             </div>
             <div>
               <p>

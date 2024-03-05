@@ -1,11 +1,13 @@
 import { useState } from "react";
 import SigninCSS from "./Signin.module.css";
 import logo from "../../assets/miniso-seeklogo.webp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { setSignIN } from "../../utils/LocalStorage";
+// import { useHistory } from "react-router-dom";
 
 function SignInPage() {
   const [showPass, setShowPass] = useState("password");
+  const nav = useNavigate();
 
   const showPassword = () => {
     showPass === "password" ? setShowPass("text") : setShowPass("password");
@@ -17,6 +19,7 @@ function SignInPage() {
     const email = e.target.querySelector("#email").value;
     const pass = e.target.querySelector("#pass").value;
     setSignIN({ name, email, pass });
+    nav("/");
   };
 
   return (
@@ -28,7 +31,7 @@ function SignInPage() {
       <div className={SigninCSS.container}>
         <div className={SigninCSS.dialog}>
           <h2>Sign in</h2>
-          <form className={SigninCSS.form} onSubmit={handleSubmit}>
+          <form className={SigninCSS.form} onSubmit={handleSubmit} action="/">
             <div>
               <label htmlFor="name">Name:</label>
               <input
