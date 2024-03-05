@@ -1,10 +1,11 @@
 import BrandProfileBanner from "../../assets/brandProfileBanner.jpg";
+import BrandCSS from "./Brand.module.css";
 
 export function BrandProfile() {
   return (
     <>
       <img src={BrandProfileBanner} alt="banner brandprofilepage" />
-      <h1>Brand Profile</h1>
+      <h1 className={BrandCSS.heading}>Brand Profile</h1>
       <p>
         MiniBuy was founded by entrepreneur Emily Chang, who discovered
         inspiration for the brand during her travels in South Korea in 2015.

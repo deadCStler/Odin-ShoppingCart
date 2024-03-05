@@ -15,7 +15,9 @@ Things pending to do:
   - ~~Adding Cart Icons~~
 - Sign in as User
   - ~~Adding Icons~~
+  - Page
 
 Bugs to address:
 
 - Closing of Nav menu when rendering another page.
+  - Idea is to use locator in useEffect

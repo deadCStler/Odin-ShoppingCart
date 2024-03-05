@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import Campaign from "../components/Others/Campaign";
 import Product from "../components/product/Product";
 import ProductPage from "../components/product/ProductPage";
+import SignInPage from "../components/signIn/SignInPage";
 
 const Router = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -87,6 +88,15 @@ const Router = () => {
           element: <Contact />,
         },
       ],
+    },
+    {
+      path: "/signin",
+      element: (
+        <>
+          <SignInPage />
+          <Footer />
+        </>
+      ),
     },
   ]);
 
