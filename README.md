@@ -17,6 +17,7 @@ Things pending to do:
   - ~~Adding Icons~~
   - Page
   - We can directly use the get Sign in method also we need to display the name
+- Search
 
 Bugs to address:
 

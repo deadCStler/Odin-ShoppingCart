@@ -1,23 +1,37 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/signIn.svg";
 import SigninCSS from "./Signin.module.css";
-import { useEffect, useState } from "react";
-import { getSingIN } from "../../utils/LocalStorage";
+import { getSingIN, setSignOut } from "../../utils/LocalStorage";
+import { useState } from "react";
 
 function SignIn() {
-  // const [isSign, setIsSign] = useState(false);
+  const [logout, setLogout] = useState(false);
+  const value = getSingIN();
 
-  // useEffect(() => {
-  //   if (getSingIN) {
-  //     setIsSign(true);
-  //   }
-  // }, []);
+  const handleLogout = () => {
+    setLogout();
+    setSignOut();
+  };
 
   return (
-    <Link to={getSingIN ? "" : "/signin"} className={SigninCSS.main}>
-      <img src={logo} alt="sign in svg" />
-      <div>Sign In</div>
-    </Link>
+    <div className={SigninCSS.rel}>
+      <Link
+        to={value ? "" : "/signin"}
+        className={SigninCSS.main}
+        onClick={() => setLogout(!logout)}
+      >
+        <img src={logo} alt="sign in svg" />
+        <div>{value ? value.name : "Sign In"}</div>
+      </Link>
+      {logout && value ? (
+        <div className={SigninCSS.logout}>
+          <div>{value.name}</div>
+          <div onClick={handleLogout}>LogOut</div>
+        </div>
+      ) : (
+        <></>
+      )}
+    </div>
   );
 }
 

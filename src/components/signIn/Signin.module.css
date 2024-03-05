@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
 }
 
 .main > img {
@@ -89,6 +90,32 @@
   border-color: #d9232e;
 }
 
+.rel {
+  position: relative;
+}
+
+.logout {
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  border-radius: 4px;
+  border: 0.1rem solid #ccc;
+  text-align: center;
+}
+
+.logout > div {
+  color: #d9232e;
+  padding: 2px;
+}
+
+.logout > div:nth-child(2):hover {
+  cursor: pointer;
+}
+
 @media (max-width: 760px) {
   .header {
     align-items: center;
@@ -106,6 +133,10 @@
   .form > div > label {
     font-size: 15px;
   }
+
+  .logout {
+    padding: 10px;
+  }
 }
 
 @media (min-width: 761px) and (max-width: 1199px) {
@@ -116,6 +147,10 @@
 
   .logo {
     width: 43px;
+  }
+
+  .logout {
+    padding: 15px;
   }
 }
 
@@ -140,5 +175,13 @@
 
   .container {
     margin: 50px 0 0;
+  }
+
+  .logout {
+    padding: 10px 15px;
+  }
+
+  .logout > div:first-child {
+    display: none;
   }
 }

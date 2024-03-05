@@ -12,6 +12,7 @@ import Campaign from "../components/Others/Campaign";
 import Product from "../components/product/Product";
 import ProductPage from "../components/product/ProductPage";
 import SignInPage from "../components/signIn/SignInPage";
+import CartPage from "../components/cart/CartPage";
 
 const Router = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -94,6 +95,15 @@ const Router = () => {
       element: (
         <>
           <SignInPage />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/cart",
+      element: (
+        <>
+          <CartPage />
           <Footer />
         </>
       ),

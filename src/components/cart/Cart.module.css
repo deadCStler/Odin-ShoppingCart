@@ -16,7 +16,39 @@
   cursor: pointer;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 1em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+@media (max-width: 760px) {
+  .header {
+    align-items: center;
+    padding: 0.5rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1199px) {
+  .header {
+    padding: 11px 0px;
+    border-bottom: 0.1rem solid #ccc;
+  }
+}
+
 @media (min-width: 1200px) {
+  .header {
+    padding: 20px 0 20px 0;
+    width: 100%;
+    border-bottom: 0.1rem solid #ccc;
+  }
   .main > div {
     display: block;
     font-size: 12px;

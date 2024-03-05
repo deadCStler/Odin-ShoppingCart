@@ -17,7 +17,7 @@ function ProductPage() {
   }, [id]);
 
   const handleAddtoCart = () => {
-    if (getSingIN) {
+    if (!getSingIN) {
       alert("You need to sign in first");
     } else {
       addToCart(id);

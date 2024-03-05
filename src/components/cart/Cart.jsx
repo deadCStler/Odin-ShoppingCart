@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/cart.svg";
 import CartCSS from "./Cart.module.css";
 
 function Cart() {
   return (
-    <div className={CartCSS.main}>
+    <Link to="/cart" className={CartCSS.main}>
       <img src={logo} alt="sign in svg" />
       <div>Cart (0)</div>
-    </div>
+    </Link>
   );
 }
 

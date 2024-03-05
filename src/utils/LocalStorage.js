@@ -1,11 +1,13 @@
 export const setSignIN = (obj) => {
-  console.log(obj);
   localStorage.setItem("userDetails", JSON.stringify(obj));
 };
 
 export const getSingIN = () => {
-  const value = JSON.parse(localStorage.getItem("userDetails"));
-  return value;
+  return JSON.parse(localStorage.getItem("userDetails"));
+};
+
+export const setSignOut = () => {
+  localStorage.removeItem("userDetails");
 };
 
 export const addToCart = (id) => {
@@ -13,7 +15,6 @@ export const addToCart = (id) => {
     const cart = {};
     cart[id] = 1;
     localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(cart);
   } else {
     const cart = JSON.parse(localStorage.getItem("cart"));
     if (cart[id]) {
@@ -22,6 +23,9 @@ export const addToCart = (id) => {
       cart[id] = 1;
     }
     localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(cart);
   }
+};
+
+export const getCart = () => {
+  return JSON.parse(localStorage.getItem("cart"));
 };
