@@ -1,15 +1,32 @@
-import { getCart } from "../../utils/LocalStorage";
 import CartCSS from "./Cart.module.css";
 
-//the idea here is we'll fetch the products and and display the item per price: refer flipkart for this page
+function CartOrderSummary({ itemsArr }) {
+  let total = 0;
 
-function CartOrderSummary() {
-  const cart = getCart();
   return (
-    <div className={CartCSS.orderSummary}>
-      <h1>Order Summary</h1>
-      <div>items</div>
-      <button>Buy</button>
+    <div>
+      <div className={CartCSS.orderSummary}>
+        <h1 className={CartCSS.heading}>Order Summary</h1>
+        {itemsArr.map((ele, index) => {
+          const itemTotal = Math.round(ele.data.price * 82.85) * ele.freq;
+          total += itemTotal;
+
+          return (
+            <div key={index} className={CartCSS.sumHead}>
+              <div className={CartCSS.sumTitle}>{ele.data.title}</div>
+              <div>x{ele.freq}</div>
+              <div className={CartCSS.price}>
+                <strong>₹{itemTotal}</strong>
+              </div>
+            </div>
+          );
+        })}
+        <h2 className={CartCSS.total}>
+          <span>Total</span>
+          <span>₹{total}</span>
+        </h2>
+        <button className={CartCSS.button}>Buy</button>
+      </div>
     </div>
   );
 }

@@ -26,13 +26,22 @@ export const addToCart = (id) => {
   }
 };
 
-export const removeFromCart = (id) => {
+export const reduceFromCart = (id) => {
   const cart = JSON.parse(localStorage.getItem("cart"));
   if (cart[id] && cart[id] > 0) {
     cart[id]--;
     if (cart[id] === 0) {
       delete cart[id];
     }
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+};
+
+export const removeFromCart = (id) => {
+  const cart = JSON.parse(localStorage.getItem("cart"));
+  if (cart[id] && cart[id] > 0) {
+    delete cart[id];
+
     localStorage.setItem("cart", JSON.stringify(cart));
   }
 };

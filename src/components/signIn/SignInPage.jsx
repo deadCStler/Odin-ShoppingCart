@@ -3,7 +3,6 @@ import SigninCSS from "./Signin.module.css";
 import logo from "../../assets/miniso-seeklogo.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { setSignIN } from "../../utils/LocalStorage";
-// import { useHistory } from "react-router-dom";
 
 function SignInPage() {
   const [showPass, setShowPass] = useState("password");

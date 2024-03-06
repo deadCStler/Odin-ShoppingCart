@@ -6,9 +6,6 @@ import CartOrderSummary from "./CartOrderSummary";
 import { useEffect, useState } from "react";
 import { getCart } from "../../utils/LocalStorage";
 
-//fetch the api here as we'll be using in both and refer flipkart for page desgin
-//make it such that we need to perfrom api call once only and use a state for cart json mostly on what to display and what not to display
-
 async function getItems(id) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`);
   const json = await res.json();
