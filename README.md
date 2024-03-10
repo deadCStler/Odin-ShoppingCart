@@ -1,10 +1,10 @@
 Things pending to do:
 
-- Implement Store: Either make it store locator or show some images with maps
-- Brand Profile styling
-- Development Page
-- Best Section at Home page
+- Brand Page
+  - Development Page
 - Search
+  - idea for this is dailog and with the help of product display page we will display the results
+    - if no the no prod found page
 - Loading pages for Prod Page, ItemsPage
 
 Bugs to address:

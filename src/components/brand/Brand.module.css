@@ -1,10 +1,46 @@
 .heading {
   text-align: center;
   font-size: 4vw;
+  margin: 20px 0;
+}
+
+.text > p {
+  margin-bottom: 20px;
+}
+
+.main {
+  background-image: url(../../assets/bibg.png);
+  background-repeat: no-repeat;
+  background-color: #f9f5f5;
+  background-position: center;
 }
 
 @media (max-width: 760px) {
+  .main {
+    padding-top: 10px;
+  }
+
   .heading {
     font-size: 5vw;
+  }
+  .text {
+    padding: 0.5rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1199px) {
+  .main {
+    padding-top: 53px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    padding: 100px 20px 50px;
+    border: solid 1px #e1e1e1;
+  }
+
+  .heading {
+    font-size: 36px;
   }
 }

@@ -146,17 +146,6 @@ function NaivgationOther({
         </li>
       )}
 
-      <li>
-        <NavLink className={NavigationCSS.link} to="/store">
-          <span
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            id="7"
-          >
-            Store
-          </span>
-        </NavLink>
-      </li>
       <li onMouseEnter={handleContactClick} onMouseLeave={handleLeaveC}>
         <NavLink
           className={`${NavigationCSS.link} ${
@@ -164,7 +153,7 @@ function NaivgationOther({
           }`}
           to="/contact"
         >
-          <span onMouseEnter={handleMouseEnter} id="8">
+          <span onMouseEnter={handleMouseEnter} id="7">
             Contact
           </span>
         </NavLink>
