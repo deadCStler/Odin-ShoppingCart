@@ -1,11 +1,12 @@
 Things pending to do:
 
-- Brand Page
-  - Development Page
 - Search
-  - idea for this is dailog and with the help of product display page we will display the results
-    - if no the no prod found page
+  - we will click on the search icon and it will convert to a bar and then you search
+  - there is no search so we will get all the products and then display it only if it contains that text
+    - can add filters also to sort by price or different category
+  - if no the no prod found page
 - Loading pages for Prod Page, ItemsPage
+- Update Banner Links
 
 Bugs to address:
 

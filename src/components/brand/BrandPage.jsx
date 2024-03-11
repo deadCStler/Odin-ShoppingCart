@@ -28,6 +28,7 @@ function BrandPage() {
             </p>
           </div>
         </div>
+        <BrandDev />
       </>
     );
   } else {
