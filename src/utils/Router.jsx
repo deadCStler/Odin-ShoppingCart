@@ -13,6 +13,7 @@ import Product from "../components/product/Product";
 import ProductPage from "../components/product/ProductPage";
 import SignInPage from "../components/signIn/SignInPage";
 import CartPage from "../components/cart/CartPage";
+import SearchResult from "../components/search/SearchResult";
 
 const Router = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -87,6 +88,10 @@ const Router = () => {
         {
           path: "/contact/:name",
           element: <Contact />,
+        },
+        {
+          path: "/search/:value",
+          element: <SearchResult />,
         },
       ],
     },

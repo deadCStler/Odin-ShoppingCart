@@ -1,15 +1,29 @@
 .main {
   display: flex;
   align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid #333;
 }
 
-.logo {
-  width: 20px;
-  margin-left: 15px;
+.main > img {
+  width: 24px;
+}
+
+.input {
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: #333;
+  opacity: 1;
 }
 
 @media (max-width: 760px) {
-  .logo {
-    width: 16px;
+  .input {
+    width: 30vw;
   }
 }
