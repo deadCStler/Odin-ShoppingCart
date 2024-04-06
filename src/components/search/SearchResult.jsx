@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProductDisplay from "../product/ProductDisplay";
 import SearchFilterBar from "./searchBar";
-
+import SearchCSS from "./search.module.css";
 function SearchResult() {
   const { value } = useParams();
   const [data, setData] = useState([]);
@@ -40,7 +40,7 @@ function SearchResult() {
   };
 
   return (
-    <>
+    <div className={SearchCSS.display}>
       <SearchFilterBar
         filterCatData={filterCatData}
         filterPrice={filterPrice}
@@ -52,7 +52,7 @@ function SearchResult() {
           <ProductDisplay data={filterItems} />
         </>
       )}
-    </>
+    </div>
   );
 }
 

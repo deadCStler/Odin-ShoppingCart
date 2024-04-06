@@ -22,6 +22,17 @@
   opacity: 1;
 }
 
+.display {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
 @media (max-width: 760px) {
   .input {
     width: 30vw;
