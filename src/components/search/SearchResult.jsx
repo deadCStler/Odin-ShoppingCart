@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProductDisplay from "../product/ProductDisplay";
+import SearchFilterBar from "./searchBar";
 
 function SearchResult() {
   const { value } = useParams();
   const [data, setData] = useState([]);
+  const [filterItems, setFilterItems] = useState([]);
 
   useEffect(() => {
     (async () => {
@@ -19,15 +21,36 @@ function SearchResult() {
         }
       }
       setData(matchedItems);
+      setFilterItems(matchedItems);
     })();
   }, [value]);
 
+  const filterCatData = (category) => {
+    let filteredItems = data.filter((item) => item.category === category);
+    setFilterItems(filteredItems);
+  };
+
+  const filterPrice = (minPrice = 0, maxPrice = Number.MAX_VALUE) => {
+    let filteredItems = data.filter(
+      (item) =>
+        Math.round(item.price * 82.85) >= minPrice &&
+        Math.round(item.price * 82.85) <= maxPrice
+    );
+    setFilterItems(filteredItems);
+  };
+
   return (
     <>
-      {data.length === 0 ? (
+      <SearchFilterBar
+        filterCatData={filterCatData}
+        filterPrice={filterPrice}
+      />
+      {filterItems.length === 0 ? (
         <h1>No results found!</h1>
       ) : (
-        <ProductDisplay data={data} />
+        <>
+          <ProductDisplay data={filterItems} />
+        </>
       )}
     </>
   );
