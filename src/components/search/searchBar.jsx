@@ -11,6 +11,7 @@ function SearchFilterBar({ filterCatData, filterPrice }) {
         <div onClick={() => filterCatData("jewellery")}>Jewellery</div>
       </div>
       <div className={SearchCSS.price}>
+        <h3>Range</h3>
         <div onClick={() => filterPrice(500, 1000)}>₹500-₹1000</div>
         <div onClick={() => filterPrice(1000, 2000)}>₹1,000-₹2,000</div>
         <div onClick={() => filterPrice(2000, 5000)}>₹2,000-₹5,000</div>
