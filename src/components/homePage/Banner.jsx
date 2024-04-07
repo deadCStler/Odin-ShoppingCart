@@ -8,10 +8,10 @@ import { useEffect, useState } from "react";
 
 function Banner() {
   const imgArr = [
-    { src: banner1, alt: "banner1", to: "/somewhere1" },
-    { src: banner2, alt: "banner2", to: "/somewhere2" },
-    { src: banner3, alt: "banner3", to: "/somewhere3" },
-    { src: banner4, alt: "banner4", to: "/somewhere4" },
+    { src: banner1, alt: "banner1", to: "/" },
+    { src: banner2, alt: "banner2", to: "/" },
+    { src: banner3, alt: "banner3", to: "/" },
+    { src: banner4, alt: "banner4", to: "/" },
   ];
 
   const [currBanner, setCurrBanner] = useState(0);
