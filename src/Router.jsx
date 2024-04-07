@@ -1,19 +1,19 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import ErrorPage from "./ErrorPage";
-import BrandPage from "../components/brand/BrandPage";
-import HomePage from "../components/homePage/HomePage";
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
-import Franchise from "../components/Others/Franchise";
-import News from "../components/news/News";
-import Contact from "../components/contactUs/Contact";
+import ErrorPage from "./utils/ErrorPage";
+import BrandPage from "./components/brand/BrandPage";
+import HomePage from "./components/homePage/HomePage";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Franchise from "./components/Others/Franchise";
+import News from "./components/news/News";
+import Contact from "./components/contactUs/Contact";
 import { useState, useEffect } from "react";
-import Campaign from "../components/Others/Campaign";
-import Product from "../components/product/Product";
-import ProductPage from "../components/product/ProductPage";
-import SignInPage from "../components/signIn/SignInPage";
-import CartPage from "../components/cart/CartPage";
-import SearchResult from "../components/search/SearchResult";
+import Campaign from "./components/Others/Campaign";
+import Product from "./components/product/Product";
+import ProductPage from "./components/product/ProductPage";
+import SignInPage from "./components/signIn/SignInPage";
+import CartPage from "./components/cart/CartPage";
+import SearchResult from "./components/search/SearchResult";
 
 const Router = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

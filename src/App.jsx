@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Router from "./utils/Router";
+import Router from "./Router";
 import "./App.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
