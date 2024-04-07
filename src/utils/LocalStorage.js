@@ -47,5 +47,5 @@ export const removeFromCart = (id) => {
 };
 
 export const getCart = () => {
-  return JSON.parse(localStorage.getItem("cart"));
+  return JSON.parse(localStorage.getItem("cart")) || {};
 };
